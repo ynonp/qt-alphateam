@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="zombie.jpg">rob_zombie_cartoon_painted_by_tabletman.jpg</file>
+    </qresource>
+</RCC>

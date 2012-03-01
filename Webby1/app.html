@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <title>Hello Hybrid</title>
+        </head>
+
+        <body>
+                <h1>Hello Alpha Team</h1>
+        </body>
+
+        <script>
+
+        function init() {
+                var save_the_world = function(results) {
+                        if ( results.humans > results.zombies ) {
+                                document.querySelector('h1').innerHTML = 'We WON !!!';
+                        } else {
+                                document.querySelector('h1').innerHTML = 'RESISTANCE IS FUTILE';
+                        }
+                };
+
+
+
+           var flee_in_panic = function(zombie_names) {
+                   console.dir(zombie_names);
+                var total_power = 0;
+
+                for (var i=0; i < zombie_names.length; ++i ) {
+                        total_power += zombie_names[i].length;
+                }
+
+                document.querySelector('h1').innerHTML = 'OH NO ' + String(total_power) + ' ZOMBIES AHEAD';
+           };
+
+           qt.scream.connect(flee_in_panic);
+           qt.fight_is_over.connect(save_the_world);
+
+        }
+
+        </script>
+</html>
