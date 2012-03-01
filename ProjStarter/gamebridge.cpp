@@ -17,7 +17,7 @@ void GameBridge::hideCard(int x, int y)
     cardDetails["row"] = x;
     cardDetails["col"] = y;
 
-    QList<QVariantMap> cards;
+    QVariantList cards;
     cards << cardDetails;
 
     emit hide_cards_array(cards);

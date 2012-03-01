@@ -5,6 +5,7 @@
 #include <QtGui>
 #include <QList>
 #include <QVariantMap>
+#include <QVariantList>
 
 class GameBridge : public QObject
 {
@@ -14,7 +15,7 @@ public:
 
 signals:
     void show_card(int, int, QPixmap);
-    void hide_cards_array(QList<QVariantMap>);
+    void hide_cards_array(QVariantList cards);
 
 public slots:
     void card_selected(int row, int col);
